@@ -1,24 +1,47 @@
-//ADDING TO THE END OF AN ARRAY
+//.PUSH() - ADD TO END
   var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
   baseballBag.push('sunglasses');
   
+  >baseballBag = ['hat', 'ball', 'cleats', 'glove', 'sunglasses']
   
-//ADDING TO THE BEGINNING OF AN ARRAY
+  
+//.UNSHIFT() - ADDING TO BEGINNING
   var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
   baseballBag.unshift('sunglasses');
+  
+  >baseballBag = ['sunglasses', 'hat', 'ball', 'cleats', 'glove']
 
 
-//REMOVING THE FIRST ITEM OF AN ARRAY
+//.SHIFT() - REMOVING FIRST ITEM
   var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
   var firstItem = baseballBag.shift(); 
   
-  //firstItem = 'hat' and baseballBag = ['ball', 'cleats', 'glove']
+  >firstItem = 'hat' and baseballBag = ['ball', 'cleats', 'glove']
   
   
-//REMOVING THE LAST ITEM OF AN ARRAY
+//.POP() - REMOVING LAST ITEM
   var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
   var lastItem = baseballBag.pop(); 
   
-  //lastItem = 'glove' and baseballBag = ['hat', 'ball', 'cleats']
-  
+  lastItem = 'glove' and baseballBag = ['hat', 'ball', 'cleats']
 
+
+//.JOIN() - PRINT ALL DATA IN ARRAY SEPARATED BY A GIVEN CHARACTER
+  var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
+  var equipment = baseballBag.join(', ');
+  
+  > equipment = hat, ball, cleats, glove
+ 
+ 
+//.CONCAT() - COMBINING TWO ARRAYS
+  var currentStudents = ['a', 's', 'd'];
+  var newStudents = ['f', 'g', 'h'];
+  var allStudent = currentStudents.concat( newStudents );
+  
+  > ['a', 's', 'd', 'f', 'g', 'h']
+  
+//.INDEXOF() - RETURNS POSITION OF ITEM 
+  var chips = ['doritos', 'lays', 'ruffles', 'tostitos'];
+  var position = chips.indexOf('ruffles');
+  
+  > position = 2
