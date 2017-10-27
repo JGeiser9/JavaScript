@@ -1,0 +1,5 @@
+//LOOPING THROUGH THE ARRAY AND PRINTING EACH STUDENT IN THE CLASS
+  var class = ['john', 'harry', 'max, 'sara', 'molly];
+  for( var i = 0; i < class.length; i += 1) {
+      console.log(class[i]);
+  }
