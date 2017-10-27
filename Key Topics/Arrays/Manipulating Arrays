@@ -1,0 +1,24 @@
+//ADDING TO THE END OF AN ARRAY
+  var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
+  baseballBag.push('sunglasses');
+  
+  
+//ADDING TO THE BEGINNING OF AN ARRAY
+  var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
+  baseballBag.unshift('sunglasses');
+
+
+//REMOVING THE FIRST ITEM OF AN ARRAY
+  var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
+  var firstItem = baseballBag.shift(); 
+  
+  //firstItem = 'hat' and baseballBag = ['ball', 'cleats', 'glove']
+  
+  
+//REMOVING THE LAST ITEM OF AN ARRAY
+  var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
+  var lastItem = baseballBag.pop(); 
+  
+  //lastItem = 'glove' and baseballBag = ['hat', 'ball', 'cleats']
+  
+
