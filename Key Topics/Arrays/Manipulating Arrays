@@ -2,28 +2,28 @@
   var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
   baseballBag.push('sunglasses');
   
-  >baseballBag = ['hat', 'ball', 'cleats', 'glove', 'sunglasses']
+  > baseballBag = ['hat', 'ball', 'cleats', 'glove', 'sunglasses']
   
   
 //.UNSHIFT() - ADDING TO BEGINNING
   var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
   baseballBag.unshift('sunglasses');
   
-  >baseballBag = ['sunglasses', 'hat', 'ball', 'cleats', 'glove']
+  > baseballBag = ['sunglasses', 'hat', 'ball', 'cleats', 'glove']
 
 
 //.SHIFT() - REMOVING FIRST ITEM
   var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
   var firstItem = baseballBag.shift(); 
   
-  >firstItem = 'hat' and baseballBag = ['ball', 'cleats', 'glove']
+  > firstItem = 'hat' and baseballBag = ['ball', 'cleats', 'glove']
   
   
 //.POP() - REMOVING LAST ITEM
   var baseballBag = ['hat', 'ball', 'cleats', 'glove'];
   var lastItem = baseballBag.pop(); 
   
-  lastItem = 'glove' and baseballBag = ['hat', 'ball', 'cleats']
+  > lastItem = 'glove' and baseballBag = ['hat', 'ball', 'cleats']
 
 
 //.JOIN() - PRINT ALL DATA IN ARRAY SEPARATED BY A GIVEN CHARACTER
@@ -45,3 +45,23 @@
   var position = chips.indexOf('ruffles');
   
   > position = 2
+
+//.JOIN() - PRINTS ALL DATA IN THE ARRAY SEPARATED BY A SPECIFIED CHARACTER
+  var daysInWeek = ['Monday', 'Saturday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  var daysString = daysInWeek.join(', ');
+  
+  > Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+
+//.CONCAT() - COMBINING TWO ARRAYS
+  var arr1 = [1, 2, 3, 4, 5];
+  var arr2 = [6, 7, 8, 9, 10];
+  var both = arr1.concat(arr2);
+  
+  > [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  
+//.INDEXOF - RETURNS THE POSITION OF A SPECIFIED VALUE IN THE ARRAY
+  var food = ['Apple', 'Orange', 'Grape'];
+  var position = food.indexOf('Orange');
+  
+  > position of 'Orange' = 1
+  * If there is no 'Orange' in the array the value returns -1 *
