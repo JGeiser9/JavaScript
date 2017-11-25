@@ -1,0 +1,18 @@
+// Basic description of how to navigate through a 2D array using bracket notation. First item always begins with a positon 0.
+// in this case the first array within the grades array will have a position of 0.
+
+var grades = [
+  [80, 90, 100, 95],
+  [75, 95, 85, 100],
+  [60, 80, 77, 90]
+];
+
+TO ACCESS EACH OF THE STUDENTS SET OF GRADES:
+ > Student 1: grades[0] -> [80, 90, 100, 95]
+ > Student 2: grades[1] -> [75, 95, 85, 100]
+ > Student 3: grades[2] -> [60, 80, 77, 90]
+ 
+TO ACCESS EACH STUDENTS IDIVIDUAL GRADES:
+ > Student 1 - Grade 1: grades[0][0] -> [80]
+ > Student 1 - Grade 3: grades[0][2] -> [100]
+ 
