@@ -1,0 +1,45 @@
+// This project is designed to search an array of all current items in stock at a hockey store...since hockey is of course the 
+// best sport out there. The program will prompt a user to search if hockey supplies are in stock. Depending on what the user
+// types it will respond if they are or are not in stock. If the user types 'list' in the prompt every product currently in
+// stock will print out separated by a comma. If the user types 'quit' or cancels the prompt the loop with end. The while loop
+// will continue to prompt the user until they quit or cancel the prompt.
+
+var search;
+var inStock = [
+    'tape', 
+    'sticks', 
+    'skates', 
+    'shoulder pads', 
+    'shin pads', 
+    'elbow pads',
+    'jerseys',
+    'socks',
+    'gloves',
+    'helmets',
+    'breezers'
+];
+
+function print (message){
+  document.write('<p>' + message + '</p>');
+}
+ // This simple function takes whatever is passsed through it and wraps 
+ // it in a html '<p>' tag to display the result on the page.
+ 
+while (true){
+  search = prompt ("Search for a product in our store. Type 'list' to view all products in stock or 'quit' to exit");
+  search = search.toLowerCase();
+      // this converts anything typed into the prompt to lowercase to compare with the array
+      
+  if (search === 'quit' || or search === null){
+    break;
+  } else if (search === 'list'){
+      print (inStock.join(', '));
+    } else {
+        if (inStock.indexOf(search) > -1){
+          print ('Yes, we have' + search + ' in the store.');
+        } else {
+            print(search + ' is/are out of stock');
+          }
+      }
+ }
+ 
