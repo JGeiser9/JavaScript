@@ -1,0 +1,44 @@
+// OBJECT FORMAT:
+var student = {
+  name: 'Jake', // name: is the key and 'Jake' is the property
+  grades: [80, 85, 90, 95];
+};
+
+
+// OBJECT OF A PERSON:
+var person = {
+  name: 'Sara',
+  country: 'USA',
+  age: 35,
+  student: false,
+  skills: ['Soccer', 'Reading', 'School']
+};
+
+
+// ACCESSING OBJECT PROPERTIES:
+var person = {
+  name: 'Sara',
+  country: 'USA'
+};
+
+  > person.name -> Sara
+  > person.country -> USA
+
+
+// CHANGING OBJECT PROPERTIES:
+person.name = 'Jake';
+  
+  > person.name -> now returns Jake rather than Sara
+
+
+// CREATING NEW OBJECT PROPERTIES:
+person.weight = 172;
+
+  > Creates a new element of the object called weight for our object of a person
+  
+  
+
+
+
+
+
