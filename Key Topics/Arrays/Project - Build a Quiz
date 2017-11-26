@@ -1,0 +1,58 @@
+//Directions:
+  //1. Use a 2D array to hold the questions and answers.
+  //2. Each element of the array is one question.
+  //3. Use a loop to cycle through the 3 quiz questions, ask it using the prompt method, and compare the response.
+  //4. Conditional statement to compare the response.
+  //5. When the loop is done - count how many were right and wrong.
+  //   ** MUST BE A DIV IN THE HTML WITH AN ID = OUTPUT IN ORDER TO WORK **
+
+var questions = [
+  ['What is the biggest state in the US?', 'Alaska'],
+  ['Who was the first President of the US?', 'George Washington'],
+  ['How many legs does an insect have?', 6];
+];
+
+var correctAnswers = 0;
+var question;
+var answer;
+var response;
+var correct = [];
+var wrong = [];
+
+function print(message) {
+  var outputDiv = document.getElementById('output');
+  outputDiv.innerHTML = message;
+}
+
+function buildList(arr) {
+ var listHTML = '<ol>';
+  for (var i = 0; i < arr.length; i += 1) {
+    listHTML += '<li>' + arr[i] + '</li>';
+  }
+  listHTML += '</ol>';
+  return listHTML;
+}
+
+for (var i = 0; i < questions.length; i += 1) {
+  question = questions[i][0];
+  answer = questions[i][1];
+  response = prompt(question);
+  response = parseInt(response);
+  
+  if (response === answer) {
+    correctAnswers += 1;
+    correct.push(question);
+  } else {
+    wrong.push(question);
+  }
+}
+
+html = "You got " + correctAnswers + " question(s) right."
+html += '<h2>You got these questions correct:</h2>';
+html += buildList(correct);
+html += '<h2>You got these questions wrong:</h2>';
+html += buildList(wrong);
+print(html);
+  
+  // Prints out the final results from the quiz by creating the headers and calling the number stored in var correctAnswers
+  
