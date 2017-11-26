@@ -1,0 +1,24 @@
+// This JS file takes the songs of a playlist array, loops throughthe array, and concatinates html string in the listHTML
+// variable so the printPlaylist function when called at the end, can add and display the content to the web page. 
+
+var playlist = [
+  ['Running Back', 'Wale'],
+  ['Black Smoke Rising', 'Greta Van Fleet'],
+  ['Redbone', 'Childish Gambino'],
+  ['Young', 'The Chainsmokers']
+]; 
+
+function print(message){
+  document.write(message);
+}
+
+function printPlaylist (list){
+  var listHTML = '<ol>';
+  for (var i = 0; i < list.length; i += 1){
+    listHTML += '<li>' + playlist[i][0] + ' by ' + playlist[i][1] + '</li>';
+  }
+  listHTML += '</ol>';
+  print(listHTML);
+}
+
+printPlaylist(playlist);
