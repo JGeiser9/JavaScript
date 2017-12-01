@@ -1,0 +1,58 @@
+.container {
+    margin: 200px auto; /*Centers the contents of the container*/
+    width: 400px;
+    box-shadow: 0 0 5px rgba(0 ,0 ,0 , 0.4); /*Changes the opacity of the box shadow*/
+    background: #f7f7f7;
+}
+
+h1 {
+    background: #2980b9;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 24pt; 
+    margin: 0;
+    padding: 10px 20px;
+}
+
+input {
+    font-size: 18px;
+    background: #f7f7f7;
+    width: 100%; /*Takes up the whole width of the container*/
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box; /*Prevents the input to be longer than the container*/
+    border: 3px solid rgba(0, 0, 0, 0); /*Sets the border to transparent*/
+}
+
+input:focus {
+    background: white;
+    outline: none; /*Gets rid of any default browser box shadow when clicked*/
+    border: 3px solid #2980b9; /*Create my own box shadowcolor on click*/
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background: white;
+    color: black;
+    height: 40px;
+    line-height: 40px; /*Centers the text within the list items*/
+}
+
+li:nth-child(2n) {
+    background: #f7f7f7 /*Zebra stripes the to do list. move this to javascript code*/
+}
+
+/*Class to be assigned when the list item is clicked on*/
+.completed {
+	color: red;
+	text-decoration: line-through;
+}
+
+.fa-plus {
+    float: right;
+}
