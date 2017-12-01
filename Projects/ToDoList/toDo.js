@@ -15,7 +15,7 @@ function completedTask() {
 const addNewTask = document.querySelector("input.addNewTask");
     addNewTask.addEventListener('keypress', (event) => {
         let key = event.which || event.keyCode; //looking for numerical key values
-        if(key === 13) {
+        if (key === 13) {
             let ul = document.getElementsByTagName('ul')[0]; //target the list
             let li = document.createElement('li'); //create new li element
             li.textContent = addNewTask.value; //grabs what user typed in
