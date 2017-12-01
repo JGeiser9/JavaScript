@@ -30,9 +30,8 @@ const addNewTask = document.querySelector("input.addNewTask");
 const toggleInput = document.querySelector("i.fa-plus");
 const addNewToDo = document.querySelector("input.addNewTask")
     toggleInput.addEventListener('click', () => {
-      if (addNewToDo.style.display == 'none') {
-         addNewToDo.style.display = 'block'; 
+      if (addNewToDo.style.display == 'block') {
+         addNewToDo.style.display = 'none'; 
       } else {
-        addNewToDo.style.display = 'none';   
+        addNewToDo.style.display = 'block';   
       }
-    });
