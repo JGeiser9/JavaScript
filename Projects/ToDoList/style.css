@@ -1,12 +1,13 @@
-.container {
+.list {
     margin: 200px auto; /*Centers the contents of the container*/
     width: 400px;
+    -webkit-box-shadow: 0 0 5px rgba(0 ,0 ,0 , 0.4);
     box-shadow: 0 0 5px rgba(0 ,0 ,0 , 0.4); /*Changes the opacity of the box shadow*/
     background: #f7f7f7;
 }
 
 h1 {
-    background: #2980b9;
+    background: #0b6f03;
     color: white;
     text-transform: uppercase;
     text-align: center;
@@ -18,8 +19,10 @@ h1 {
 input {
     font-size: 18px;
     background: #f7f7f7;
+    display: none;
     width: 100%; /*Takes up the whole width of the container*/
     padding: 13px 13px 13px 20px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box; /*Prevents the input to be longer than the container*/
     border: 3px solid rgba(0, 0, 0, 0); /*Sets the border to transparent*/
 }
@@ -38,9 +41,11 @@ ul {
 
 li {
     background: white;
+    text-transform: capitalize;
     color: black;
     height: 40px;
     line-height: 40px; /*Centers the text within the list items*/
+    overflow: hidden;
 }
 
 li:nth-child(2n) {
@@ -49,10 +54,26 @@ li:nth-child(2n) {
 
 /*Class to be assigned when the list item is clicked on*/
 .completed {
-	color: red;
-	text-decoration: line-through;
+    font-style: italic;
+    color: darkgray;	
 }
 
 .fa-plus {
     float: right;
+}
+
+li .fa-trash {
+    font-size: 20px;
+    opacity: 0;
+    position: relative;
+    left: -200px;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.completed .fa-trash {
+    left: 0;
+    margin-right: 20px;
+    margin-left: 20px;
+    opacity: 1;
 }
