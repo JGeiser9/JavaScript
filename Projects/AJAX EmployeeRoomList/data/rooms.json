@@ -1,0 +1,29 @@
+/* There is no backend set up yet so I am passing a json file with preloaded 
+information to practice the AJAX functionality */
+
+[
+  {
+   "room": 101,
+   "available": false
+  },
+  {
+   "room": 102,
+   "available": true
+  },
+  {
+   "room": 103,
+   "available": false
+  },
+  {
+   "room": 104,
+   "available": false
+  },
+  {
+   "room": 105,
+   "available": true
+  },
+  {
+   "room": 106,
+   "available": true
+  }
+]
