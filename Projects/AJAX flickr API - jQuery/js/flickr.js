@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+ // ----- STAGE 1 -----
  $('button').click(function () {
     $("button").removeClass("selected"); // remove "selected" from all buttons
     $(this).addClass("selected"); // add "selected" and styling to clicked
