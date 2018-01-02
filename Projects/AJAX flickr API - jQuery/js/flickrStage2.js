@@ -2,15 +2,17 @@
 
 $(document).ready(function() {
 
+    var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
    $('form').submit(function (event) {
-     event.preventDefault(); // prevent the browser from opening a new window
-     var $search = $('#search'); // store the input tag's id="search"
-     
+     event.preventDefault();
+     var search = $('#search');
+
     // the AJAX part
-    var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-    var input = $search.val(); // requesting the tags equal to the value the user searches for
+    
+    var searchField = search.val();
     var flickrOptions = {
-      tags: input,
+      tags: searchField,
       format: "json"
     };
     function displayPhotos(data) {
