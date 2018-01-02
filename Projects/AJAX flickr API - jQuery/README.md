@@ -9,4 +9,4 @@ click event will call a AJAX request to the flickr API to retrieve the latest 20
 
 Stage 2: 
 
-The second stage of the build 
+The second stage of the build will allow the user to type in an image they wish to search for. The form will be submited and the value of the search will be passed along to retrieve the most recent 20 posts on flickr with the tag matching the search input by the user.
