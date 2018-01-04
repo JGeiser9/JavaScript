@@ -1,15 +1,34 @@
-var button = document.getElementById("button"); // assign the html button to the button variable
-var dice = {
-  sides: 6,
-  roll: function () {
-    var randNum = Math.floor(Math.random() * this.sides) + 1; // .floor never reaches 0, must add one to get 1 - 6
-    return randNum; // return the value of the variable randNum
-  } // end roll method
+var button = document.getElementById("button");
+var dice = new Dice(6); // new instance
+
+
+// ----- Constructor Function -----
+
+/*
+function Dice (sides) {
+  this.sides = sides;
+  this.roll = function () {
+    var randNum = Math.floor(Math.random() * this.sides) + 1;
+    return randNum;
+  }
+} // constructor function for the roll of the dice  
+*/
+
+function Dice(sides) {
+  this.sides = sides;
 }
 
+Dice.prototype.roll = function () {
+  var randNum = Math.floor(Math.random() * this.sides) + 1;
+  return randNum;
+} /* Prototype for rolling the dice to share between all instances
+     rather than creating every instance w/ the .roll method */
+
+
+// ----- Functionality -----
 button.onclick = function() {
-  var result = dice.roll(); // set the variable result to the random number
-  printNumber(result); // call the function and pass the value to change the innerHTML to the random number
+  var result = dice.roll();
+  printNumber(result);
 };
 
 function printNumber(number) {
