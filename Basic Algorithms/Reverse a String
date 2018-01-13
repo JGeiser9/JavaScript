@@ -1,0 +1,12 @@
+function reverseString(str) {
+  // Create an empty string to concatenate the reversed order into
+  var reverse = ""; 
+  for(var i = str.length - 1; i >= 0; i--){
+      // Take what is in the string and concatenate the next letter onto the string
+      reverse = reverse + str[i]; 
+  }
+  // Return the result of the string
+  return reverse;
+}
+
+reverseString("hello");
