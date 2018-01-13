@@ -1,0 +1,11 @@
+function factorialize (num) {
+  // Create a loop to decrease num by 1 until the loop fails
+  for (i = 1; num >= 1; num--) {
+    // Set i = to the current value of number * the product of the numbers so far
+    i = num * i;
+  }
+  // Return the result of the factorial
+  return i;
+}
+
+factorialize(5);
