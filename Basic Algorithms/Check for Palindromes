@@ -1,0 +1,28 @@
+function palindrome(str) {
+  var splitStr;
+  var reverseArray;
+  var joinStr;
+  
+  // Convert to lowercase for testing and use RegEx to replace anything that is not a letter
+  str = str.toLowerCase().replace(/[^0-9a-z]/gi, "");
+  
+  // Split the string at each letter to create an array containing the letters
+  splitStr = str.split("");
+  
+  // Reverse the contents of the new array of each letter in the string
+  reverseArray = splitStr.reverse();
+  
+  // Join the reversed order back together
+  joinStr = reverseArray.join("");
+  
+  // Test to see if the original string (with letters only) is equal to the newly reversed order
+  if (str === joinStr) {
+    // If it is...
+    return true;
+  } else {
+    // If it is not...
+    return false;
+  }
+}
+
+palindrome("%^*E_YE");
