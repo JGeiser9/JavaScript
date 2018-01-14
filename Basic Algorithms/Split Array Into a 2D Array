@@ -1,0 +1,17 @@
+function chunkArrayInGroups(arr, size) {
+  
+  // Create a empty array for hold the split arrays
+  var tempArr = [];
+  
+  // Loop through the array starting at index 0 in the array
+  for (var i = 0; i < arr.length; i += size) {
+  
+    // Slice between index i and i + size (in this case every 2)
+    tempArr.push(arr.slice(i, i + size));
+  }
+  
+  // Return the new 2D array
+  return tempArr;
+}
+
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2);
