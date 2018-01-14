@@ -1,0 +1,19 @@
+function bouncer(arr) {
+  // Remove all falsy things from 'arr'
+
+Option 1:
+// Return and filter Boolean (returns only truthy)
+  return arr.filter(Boolean);
+
+Option 2:
+// Return the arr and filter with a callback testing the value 
+  return arr.filter(function(value) {
+  
+    // If the value is true
+    if (value) {
+      return value;
+    }
+  });
+}
+
+bouncer([7, "ate", "", false, 9]);
