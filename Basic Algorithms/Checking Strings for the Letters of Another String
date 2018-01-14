@@ -1,0 +1,24 @@
+function mutation(arr) {
+
+  // Create variables for testing for each of the arr parts. Convert to lowercase for testing
+  var test = arr[1].toLowerCase();
+  var target = arr[0].toLowerCase();
+  
+  // Loop through test (arr[1].toLowerCase())
+  for (var i = 0; i < test.length; i++) {
+  
+    // Search 'target' for each letter of 'test' at index i
+    if (target.indexOf(test[i]) === -1) {
+      
+      // If target does not have the letter at test[i] it returns -1 and the function should return false
+      return false;
+    }  
+  }
+  
+  // If 'target' does contain the contents of 'test' the function should return true
+  return true;
+ }
+
+mutation(["hello", "neo"]); // False
+mutation(["Mary", "Army"]); // True
+mutation(["hello", "Hello"]); // True
