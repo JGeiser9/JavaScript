@@ -1,0 +1,13 @@
+function repeatStringNumTimes(str, num) {
+  
+  // If the num (number of times to repeat) is < 0 { This tests if it fails right away. If it doesn't... }
+  if(num < 0){
+    // Return nothing
+    return "";
+  } else {
+    // If the test passes return the 'str' reapeated by the 'num' of times
+    return str.repeat(num);
+  }
+}
+
+repeatStringNumTimes("*", 3);
