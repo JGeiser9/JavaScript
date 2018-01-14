@@ -1,0 +1,24 @@
+function truncateString(str, num) {
+ 
+  // If the 'str' length is > than 'num' and 'num' is > than 3 
+  if (str.length > num && num > 3) {
+  
+    // Slice the string at position 0 through (num - 3) to account for the the length of '...' (3)
+    return str.slice(0, (num-3)) + "...";
+  } 
+  
+  // Otherwise, if the length of 'str' is > 'num' and 'num' is < 3
+  else if (str.length > num && num < 3) {
+  
+    // Slice the string between the position 0 and position num and concatenate '...' to the end
+    return str.slice(0, num) + "...";
+  }
+  else {
+  
+    // Return the truncated string with the '...' at the end
+    return str;
+  }
+  
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 11);
