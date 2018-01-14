@@ -1,0 +1,24 @@
+function confirmEnding(str, target) {
+
+  Option 1:
+  // endsWith() method determines if a string ends with the characters of a specified string, returns boolean true/false
+  
+    if(str.endsWith(target)) {
+      return true;
+    } else {
+      return false;
+    }
+  
+  Option 2:
+  // substr() method returns a string beginning at the specified location through the specified number of characters
+  // Create a new substring between the end of the str - the length of the target string. Compare the new substr to target
+  
+    if(str.substr(str.length - target.length) === target) {
+      return true;
+    } else {
+      return false;
+    }
+     
+}
+
+confirmEnding("Bastian", "ian");
