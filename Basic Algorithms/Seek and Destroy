@@ -1,0 +1,23 @@
+function destroyer(arr) {
+ 
+  // .call() calls the arguments provided individually
+  var args = arr.slice.call(arguments);
+  
+  // Loop through the arr
+  for(var i = 0; i < arr.length; i++) {
+    // Loop through the arguments passed along in the destroyer() function
+    for(var j = 0; j < args.length; j++) {
+      // If the current array item matches the first argment, delete the item.
+      // Then move onto the second argument.
+      if(arr[i] === args[j]){
+        delete arr[i];
+      }
+    }
+  }
+  
+  // The array will return null values where the old ones used to be,
+  // Filter them and return the remaining values in the array
+  return arr.filter(Boolean);
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
