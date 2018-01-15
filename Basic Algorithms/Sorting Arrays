@@ -1,0 +1,8 @@
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array
+  arr.push(num); // Push the new num into the arr
+  arr.sort(function(a, b) { return a-b; }); // sort from least to greatest
+  return arr.indexOf(num); // Return the index position of num once sorted
+}
+
+getIndexToIns([40, 50, 30, 10, 60], 20);
