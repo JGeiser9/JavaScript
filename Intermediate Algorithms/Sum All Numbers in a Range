@@ -1,0 +1,21 @@
+function sumAll(arr) {
+
+    // Get largest # and store in var
+    var max = Math.max(arr[0], arr[1]); 
+    
+    // Get smallest # and store in var
+    var min = Math.min(arr[0], arr[1]); 
+    
+    // Var to count our running total
+    var temp = 0; 
+  
+    // 'i' begins at the min value in the array, loop through and add i to temp to keep a running total, move on to i + 1
+    for (var i = min; i <= max; i++){
+        temp += i;
+    }
+  
+  // Return the sum of all the numbers in the range
+  return(temp);
+}
+
+sumAll([60, 4]);
