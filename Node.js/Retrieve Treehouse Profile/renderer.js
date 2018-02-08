@@ -17,14 +17,14 @@ function view(templateName, values, response) {
   fileContents = mergeValues(values, fileContents);
   //Write out the contents to the response
   response.write(fileContents);
-} 
+}
 
 function css(templateName, response) {
   //Read from the template file
   var fileContents = fs.readFileSync('./styles/' + templateName + '.css', {encoding: "utf8"});
   //Write out the contents to the response
   response.write(fileContents);
-} 
+}
 
 module.exports.view = view;
 module.exports.css = css;
