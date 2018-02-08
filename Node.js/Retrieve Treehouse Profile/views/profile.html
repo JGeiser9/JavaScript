@@ -5,9 +5,13 @@
     <p><span>@{{username}}</span></p>
 
     <ul>
-        <li><span>{{badges}}</span> Badges earned</li>
-        <li><span>{{javascriptPoints}}</span> JavaScript points</li>
-        <li><a href="/">search again</a></li>
+        <li>Badges Earned: <span>{{badges}}</span></li>
+        <li>JavaScript Points: <span>{{javascriptPoints}}</span></li>
+        <li>Most Recent Badge:
+          <img class="badgeIcon" src="{{badgeIcon}}">
+          <span class="recentBadge">{{recentBadge}}</span>
+        </li>
+        <li><a href="/">Search Again</a></li>
     </ul>
 
 </div>
