@@ -1,4 +1,3 @@
-
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 @import url(http://necolas.github.io/normalize.css/3.0.2/normalize.css);
 
@@ -10,6 +9,19 @@ body {
     padding: 0 40px;
     font: 18px normal 'Varela Round', Helvetica, serif;
     color: #777B7E;
+}
+
+.recentBadge {
+  display: block;
+}
+
+.badgeIcon {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-left: 43%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 img {
