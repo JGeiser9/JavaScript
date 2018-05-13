@@ -1,0 +1,36 @@
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  
+  // Loop through each element in arr1
+  for (var i = 0; i < arr1.length; i++) {
+    
+    /* Search arr2 for the location of each element in arr1.
+       If the element in arr1 is not present in arr2 the if 
+       statement returns false and pushes that element into the
+       newArr. */
+    if (arr2.indexOf(arr1[i]) === -1) {
+      // Push any unique elements in arr1 to newArr
+      newArr.push(arr1[i]);
+    }
+    
+  }
+  
+  // Loop through each element in arr2
+  for (var j = 0; j < arr2.length; j++) {
+    
+    /* Search arr1 for the location of each element in arr2.
+       If the element in arr2 is not present in arr1 the if 
+       statement returns false and pushes that element into the
+       newArr. */
+    if (arr1.indexOf(arr2[j]) === -1) {
+      // Push any unique elements in arr2 to newArr
+      newArr.push(arr2[j]);
+    }
+    
+  }
+  
+  // Return the contents of the newly created 'newArr'
+  return newArr;
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
