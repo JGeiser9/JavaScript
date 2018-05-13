@@ -1,0 +1,57 @@
+function convertToRoman(num) {
+  //Create an empty string for the roman numeral
+  let answer = '';
+  
+  //Create two separate arrays, one for values and one for roman numerals
+  let value = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
+  let numeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V',
+                      'IV', 'I' ];
+  
+  //Loop through each element in the value array
+  for (var i = 0; i < value.length; i++) {
+    //Only do the following when the number is less than num
+    while (value[i] <= num) {
+      //Concat the numeral[i] to the answer
+      answer += numeral[i];
+      //Subtract num by the value of value[i]
+      num -= value[i];
+    }
+  }
+  
+ return answer;
+}
+
+convertToRoman(36);
+
+
+How this works:
+  
+  First time the while loop passes --> 
+    while 10 <= 36
+    answer += numeral[i] (i = 8 here which gives us the 'X' roman numeral so answer = 'X')
+    num (36) - value[i] (10) = 26
+    
+  Second time the while loop passes --> 
+   while 10 <= 26
+   answer += numeral[i] (i = 8 here which gives us the 'X' roman numeral so answer = 'XX')
+   num (26) - value[i] (10) = 16
+  
+  Third time the while loop passes --> 
+   while 10 <= 16
+   answer += numeral[i] (i = 8 here which gives us the 'X' roman numeral so answer = 'XXX')
+   num (16) - value[i] (10) = 6
+  
+  Fourth time the while loop passes --> 
+   while 10 <= 6 (No longer passes move to next location in the array)
+   while 5 <= 6
+   answer += numeral[i] (i = 9 here which gives us the 'V' roman numeral so answer = 'XXXV')
+   num (6) - value[i] (5) = 1
+   
+  Fifth time the while loop passes --> 
+   while 5 <= 6 (No longer passes move to next location in the array)
+   while 1 <= 1
+   answer += numeral[i] (i = 10 here which gives us the 'I' roman numeral so answer = 'XXXVI')
+   num (1) - value[i] (1) = 0
+  
+  Loop Ends! Return answer = 'XXXVI'
+   
