@@ -1,0 +1,22 @@
+function translatePigLatin(str) {
+  let regex = /[aeiou]/gi, //G - find all matches and I - ignore case
+      firstVowel = str.indexOf(str.match(regex)[0]); //Location of first vowel
+  
+  //If the first letter matches any vowels in the list
+  if (str[0].match(regex)) {
+    //Add 'way'to the end of the str and return str
+    str = str + 'way';
+  } else {
+    //Create 2 substrings 
+    //First: from the location of the first vowel through end of str
+    //Second: from the beginning of str through location of first vowel
+    //Concatenate 'ay' on the end of the concatenated string
+    str = str.substr(firstVowel) + str.substr(0, firstVowel) + 'ay';
+  }
+    
+ return str; //Return the final str result
+}
+
+translatePigLatin("california"); // returns aliforniacay
+translatePigLatin("paragraphs"); // returns aragraphspay
+translatePigLatin("glove"); // returns oveglay
