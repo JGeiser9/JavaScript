@@ -1,0 +1,24 @@
+function myReplace(str, before, after) {
+  
+  //Find the index location for the first letter of the before param
+  let loc = str.indexOf(before), 
+      capitalize = after.slice(0, 1).toUpperCase() + after.slice(1); //Separate the first letter, capitalize, add the rest
+      
+  //If the first letter of before param is not upper case
+  if (str[loc] != str[loc].toUpperCase()) {  
+  
+    //Then replace parameters before and after and return the string
+    str = str.replace(before, after);
+    
+  } else {
+  
+    //Otherwise replace before with our capitalized after parameter and return the string 
+    str = str.replace(before, capitalize);
+    
+  }
+  
+  //Return the entire string
+  return str;
+}
+
+myReplace("He is Sleeping on the couch", "Sleeping", "sitting");
