@@ -1,0 +1,38 @@
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  let arr = [];
+  let name,
+      i,
+      obj,
+      key,
+      sVal,
+      cVal;
+  
+  //Loop through source object and set sVal eaqual to the value Capulet
+  for (name in source){
+    sVal = source[name];
+  } 
+  
+  //Loop through each object in the collection array
+  for (i = 0; i < collection.length; i++) {
+    //Set obj equal to the full object at location [i] in the loop
+    obj = collection[i];
+    
+    //Loop through each key in the object at location [i]
+    for(key in obj){
+      //Set cVal equal to the value of the key as it loops through each key  
+      cVal = obj[key];
+      
+      //If key value in collection = source value 'Capulet'
+      if (cVal == sVal && name == key) {
+        //Push the object that contains the source value to the new arr
+        arr.push(obj);
+      }
+    } 
+  }
+  
+  //Return the object that matches the source value.
+  return arr;
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
