@@ -1,0 +1,24 @@
+// Complete the plusMinus function below.
+function plusMinus(arr) {
+    let countMin = 0,
+        countPos = 0,
+        countEqual = 0,
+        fractionPos,
+        fractionMin,
+        fractionEqual;
+   
+    //For each item in the array test number
+    arr.forEach( number => {
+        // Is num = 0? Yes - add one to equal, No - is num > 0? Yes - add one to pos, No - add one to min
+        number === 0 ? countEqual++ : number > 0 ? countPos++ : countMin++;
+    });
+    
+    //Create the fraction and limit it to 6 decimal places
+    fractionPos = (countPos / arr.length).toFixed(6);
+    fractionMin = (countMin / arr.length).toFixed(6);
+    fractionEqual = (countEqual / arr.length).toFixed(6);
+    
+    console.log(fractionPos);
+    console.log(fractionMin);
+    console.log(fractionEqual);
+}
