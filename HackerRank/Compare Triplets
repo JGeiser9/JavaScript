@@ -1,0 +1,17 @@
+// Complete the compareTriplets function below.
+function compareTriplets(a, b) {
+    //Setting score counters
+    let alice = 0, 
+        bob = 0;
+  
+    //Loop through the 'a' array and compare contents to 'b' array
+    for (let i = 0; i < a.length; i++) {
+        if(a[i] > b[i]) {
+            alice++; //Add one to Alice's score
+        } else if(a[i] < b[i]) {
+            bob++; //Add one to Bob's score
+        }
+    }
+    
+    return [alice, bob]; //Return the score
+}
