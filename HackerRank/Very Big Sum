@@ -1,0 +1,11 @@
+// Complete the aVeryBigSum function below.
+function aVeryBigSum(ar) {
+    let sum = 0;
+    
+    //Loop through the array and add each item to sum
+    for(let i = 0; i < ar.length; i++) {
+        sum += ar[i];
+    }
+    
+    return sum; //return the sum
+}
