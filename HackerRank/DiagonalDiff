@@ -1,0 +1,19 @@
+// Complete the diagonalDifference function below.
+function diagonalDifference(arr) {
+    let locOne = 0,
+        locTwo = 2,
+        sumOne = 0,
+        sumTwo = 0,
+        diff;
+
+    //Loop through 2D Array grab the 1st number of 1st array, 2nd number of 2nd array...
+    for (let i = 0; i < arr.length ; i++) {
+        sumOne += arr[i][locOne]; //1st iteration: arr[0][0], 2nd iteration: arr[1][1], 3rd iteration: arr[2][2]
+        sumTwo += arr[i][locTwo]; //1st iteration: arr[0][2], 2nd iteration: arr[1][1], 3rd iteration: arr[2][0]
+        locOne++; //Increase counter one
+        locTwo--; //Decrease counter two
+        diff = Math.abs(sumOne - sumTwo); //Find the difference and return absolute value
+    }
+    
+    return diff; //Return the result
+}
